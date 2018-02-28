@@ -1,0 +1,25 @@
+
+    <div class="header-container">
+        <div class="col-1 header-home-item">
+            <a href="{{url_for('showCatalog')}}">
+                <img src="{{ url_for('static', filename='home.png') }}" alt="home">
+            </a>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-2 header-name-item">Catalog App</div>
+        <div class="col-6"></div>
+        <div class="col-1 header-login-item">
+            {%if 'username' not in session %}
+            <a href="{{url_for('showLogin')}}" class="textcolorwhite">Click Here to Login </a>
+            {% else %}
+            <a href="{{url_for('disconnect')}}" class="textcolorwhite">Logout </a>
+        {% endif %}
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+        <!-- top content divider  -->
+    <div class="content-divider">
+        <div class="col-12"></div>
+    </div>
+

@@ -1,0 +1,423 @@
+* {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	box-sizing: border-box;
+}
+
+/* link colors */
+a.textcolorwhite:link, a.textcolorwhite:visited {
+	text-decoration: none;
+    color: white;
+}
+
+a.contentHeader:link, a.contentHeader:visited {
+    text-decoration: none;
+    color: darkblue;
+}
+
+a.contentText:link, a.contentText:visited {
+	text-decoration: none;
+	color: red;
+}
+
+a.newButton:link, a.newButton:visited {
+	text-decoration: none;
+	color: blue;
+	background-color: white;
+	font-size: 60%;
+	text-align: right;
+}
+
+a.JSONButton:link, a.JSONButton:visited {
+    text-decoration: none;
+    color: blue;
+    background-color: lightgray;
+    font-size: 30%;
+    text-align: right;
+    padding-right: 1vw;
+}
+
+.flash {
+    width:100%;
+    text-decoration: none;
+    font-size: 50%;
+    text-align: center;
+    padding-bottom: 1vw;
+    color: indianred;
+    background-color: lightgray;
+
+}
+
+/* flexbox */
+
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+	font-size: 36px;
+}
+
+.img {
+  width: 100%;
+}
+
+.header-container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	align-items: center;
+	color: white;
+	background: black;
+	height: 50%;
+}
+
+.header-home-item {
+	text-align: center;
+}
+
+.header-name-item {
+	font-size: 75%;
+}
+
+.header-login-item {
+	font-size: 50%;
+	text-align: center;
+	background-color: red;
+}
+
+.content-divider {
+	display: flex;
+	flex-wrap: wrap;
+	color:	darkblue;
+	background-color: lightgray;
+	height:	20px;
+}
+
+.content-container {
+	display: flex;
+	flex-wrap: wrap;
+	color:	darkblue;
+	background-color: white;
+	font-size: 50%;
+}
+
+.content-side {
+    background-color: lightgray;
+}
+
+
+
+.content-label {
+    font-size: 80%;
+    padding-top: 2vw;
+}
+
+.content-name {
+    width: 25%;
+}
+
+.content-descrip {
+    width: 80%;
+    border-color: lightgray;
+    color: gray;
+}
+
+.catalog-name-line {
+	padding-left: 1vw;
+}
+
+.content-item {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+	padding-left: 1vw;
+}
+
+.content-paren {
+    color: #BDC3C7;
+    font-style: italic;
+    font-size: 75%;
+}
+
+.content-frame {
+    background-color: white;
+    padding-left: 2vw;
+}
+
+.content-top-label {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.bottom-line {
+    padding-bottom: 2vw;
+    background-color: lightgray;
+}
+
+.top-line {
+    padding-top: 2vw;
+}
+
+
+.btn {
+    text-decoration: none;
+    border: none;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    color:  red;
+}
+
+.btn-bar {
+    font-size: 65%;
+    font-weight: bold;
+}
+
+.btn-JSON {
+    font-size: 65%;
+    text-align: right;
+}
+
+.col-1 {
+     width: calc(1 * 100% / 12);
+}
+
+.col-2 {
+     width: calc(2 * 100% / 12);
+}
+
+.col-3 {
+     width: calc(3 * 100% / 12);
+}
+
+.col-4 {
+    width: calc(4 * 100% / 12);
+}
+
+.col-5 {
+     width: calc(5 * 100% / 12);
+}
+
+.col-6 {
+     width: calc(6 * 100% / 12);
+}
+
+.col-7 {
+     width: calc(7 * 100% / 12);
+}
+
+.col-8 {
+     width: calc(8 * 100% / 12);
+}
+
+.col-9 {
+     width: calc(9 * 100% / 12);
+}
+
+.col-10 {
+     width: calc(10 * 100% / 12);
+}
+
+.col-11 {
+     width: calc(11 * 100% / 12);
+}
+
+.col-12 {
+     width: calc(12 * 100% / 12);
+}
+
+@media only screen and (max-width: 768px) { /* for ipad size max 2 images per row */
+    [class*="col-"] {
+        width: 100%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 50%;
+    }
+    .col-4 {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 412px) { /* for mobile size max 1 image per row */
+    [class*="col-"] {
+        width: 100%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+}
+
+
+/* after flexbox */
+/*h1 {
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	color: #51453B;
+	line-height: 60px;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 24px;
+	color: #42C3C9;
+	line-height: 29px;
+}
+
+h3 {
+	font-size: 18px;
+	color: #4A4A4A;
+	line-height: 23px;
+}
+ p {
+ 	font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ 	font-weight: 400;
+ }
+
+ strong {
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ }
+
+ a {
+ 	font-size: 14px;
+ 	color: #0093B9;
+ 	line-height: 17px;
+ }
+.padding-top {
+	padding-top: 30px;
+}
+.padding-bottom {
+	padding-bottom: 30px;
+}
+.margin-right {
+	margin-right: 30px;
+}
+.padding-none {
+	padding: 0;
+}
+.btn {
+	padding: 20px;
+	margin: 0;
+	border-color: #9FB80A;
+	border-width: 2px;
+	color: #9FB80A;;
+}
+.btn:hover {
+	border-color: #9FB80A;
+}
+.btn.delete {
+	border-color: #aaaaaa;
+	color: #aaaaaa;
+}
+.btn.delete:hover {
+	border-color: #aaaaaa;
+	color: red;
+}
+.glyphicon {
+	line-height: 16px;
+	font-size: 26px;
+	color: white;
+	font-weight: 400;
+}
+.top-menu {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 32px;
+	color: white;
+	background-color: black;
+}
+
+/* used for glyph + menu login */
+/* if top-menu class used for div, then this class automatically used for <a> within the div not class= needed in <a>*/
+/*.top-menu a {
+	font-size: 16px;
+	font-weight: 400;
+	color: white;
+	text-align: center;
+}
+
+.top-menu-login {
+    height: 30px;
+    line-height: 20px;
+	background-color: coral;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.divider {
+	height: 10px;
+}
+.divider.gray {
+	background-color: #F0F0F0;
+}
+.divider.green {
+	background-color: #9FB80A;
+}
+.banner.main {
+	height: 150px;
+	background: url("/static/top-banner.jpg");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.banner.menu {
+	height: 150px;
+	background-color: #E1E17F;
+}
+.banner.profile {
+	height: 150px;
+	background-color: #A6E8EB;
+}
+.banner h1 {
+	margin: 45px 0;
+}
+ .category-list {
+ 	color:	red;
+ 	background-color: white;
+ 	padding: 20px;
+u }
+ .category-list:hover {
+ 	background-color: F0F0F0;
+ 	padding: 20px;
+}
+
+.category-item {
+	background: #F0F0F0;
+}
+.creator {
+	padding-right: 20px;
+	margin-top: -20px;
+	text-align: right;
+	float:right;
+}
+.creator img {
+	width: 100px;
+	border-radius: 50%;
+}
+.creator figcaption {
+	font-size: 14px;
+	color: #7B7573;
+	font-weight: 400;
+	margin-top: -20px;*/
+}
+.flash {
+	background-color: #98FB98;
+	width:100%;
+	text-decoration: none;
+
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+	font-size: 50%;
+
+}

@@ -1,0 +1,23 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+{% include "flash.html" %}
+
+<div class = "content-container">
+    <div class="col-2 content-side"></div>
+    <div class="col-8 content-frame">
+        <div class="col-12"><h6> Are you sure you want to delete {{item.name}}? </h6></div>
+            <form action="#" method = "post">
+                <div>
+                    <button type="submit" class="btn btn-default" id="submit">Yes</button>
+                    <span class="btn-bar">|</span>
+                    <input type="button" class="btn btn-default delete" value="Cancel" onclick="window.location.href='{{cancel_URL}}'" />
+                </div>
+            </form>
+        </div>
+    <div class="col-2 content-side"></div>
+    <div class="col-12 bottom-line"></div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% include "header.html" %}
+{% include "flash.html" %}
+
+<div class = "content-container">
+	<div class="col-2 content-side"></div>
+	<div class="col-8 content-frame">
+		<div class="col-12 content-top-label">{{categoryName}} Item:  {{item.name}}</div>
+		<textarea class="content-descrip" rows="10" name="description">Description: {{item.description}}</textarea>
+		<form action="#" method = "post">
+			<input type="button" value="Edit" class="btn"
+				onclick="window.location.href='{{edit_URL}}'">
+			<span class="btn-bar">|</span>
+			<input type="button" value="Delete" class="btn"
+				onclick="window.location.href='{{delete_URL}}'">
+			<span class="btn-bar">|</span>
+			<input type="button" value="Cancel" class="btn"
+				onclick="window.location.href='{{cancel_URL}}'">
+		</form>
+	</div>
+	<div class="col-2 content-side"></div>
+</div>
+
+	<!-- bottom content divider  -->
+	<div class="content-divider">
+    		<a href="{{url_for('itemJSON', categoryName=item.categoryOwnerName, itemName = item.name)}}" class="col-12 JSONButton">Item JSON</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+{% include "header.html" %}
+{% include "flash.html" %}
+
+	<!-- option is an input variable. option = 1: Show Categories. option = 2: Show Category Items  -->
+
+	<!-- title line -->
+	<div class = "content-container">
+		<div class="col-2 content-side"></div>
+		<div class="col-3 catalog-name-line"><a href="{{url_for('showCatalog')}}" class="contentHeader">Category</a></div>
+
+		{% if option == 1 %}
+			<div class="col-5 catalog-name-line">Latest Items</div>
+		{% else %}
+			<div class="col-4 catalog-name-line">{{selectedCategory.name}} Items
+				<span>({{itemCount}} items)</span></div>
+			<div class="col-1 catalog-name-line">
+
+				<a href="{{url_for('newItem', categoryName=selectedCategory.name)}}" class="newButton">New Item</a>
+
+			</div>
+		{% endif %}
+		<div class="col-2 content-side"></div>
+	</div>
+
+	<!-- content consists of 2 columns: 1 is list of all categories, 1 is most recent 10 items added / updated -->
+
+	<!-- 2 columns to start the line -->
+	<!-- 3 columns for category name links -->
+	<div class = "content-container">
+		<div class="col-2 content-side"></div>
+		<div class="col-3">
+			<div class="content-item">
+				{% for category in categories %}
+					<div class="col-12">
+						<a href="{{url_for('showCategoryItems', categoryName = category.name)}}" class="contentText">{{category.name}}</a>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="col-5">
+			<div class="content-item">
+				{% for item in items %}
+					<div class="col-12">
+						<a href="{{url_for('showItem', categoryName=item.categoryOwnerName, itemName = item.name)}}" class="contentText">{{item.name}}</a>
+						<span class="content-paren"> ({{item.categoryOwnerName}}) </span>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="col-2 content-side"></div>
+	</div>
+
+
+	<!-- bottom content divider  -->
+	<div class="content-divider">
+    		<a href="{{url_for('catalogJSON')}}" class="col-12 JSONButton">Category JSON</a>
+    </div>
+
+{% endblock %}
