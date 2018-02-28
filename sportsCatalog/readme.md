@@ -96,6 +96,9 @@ sys.path.insert(0,"/var/www/sportsCatalog/")
 from application import app as application
 application.secret_key = '12345'
 
+- ssh_config file at /etc/ssh/sshd_config
+
+Text not included here for security reasons.
 
 RESOURCES USED
 
