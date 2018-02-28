@@ -34,7 +34,7 @@ Json
 
 SSH'ING IN
 
-use 'ssh -i ~/.ssh/grader-rsa -p 2200 grader@18.219.188.90' to log in. The grader password is: mygrader
+use 'ssh -p 2200 grader@18.219.188.90' to log in. The grader password is: mygrader.
 
 
 TECHNOLOGY OVERVIEW
